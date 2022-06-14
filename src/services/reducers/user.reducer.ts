@@ -7,7 +7,7 @@ const initialState: UserState = {
   error: null,
 };
 
-const userReducer =  (state = initialState, action: UserAction) => {
+const userReducer = (state = initialState, action: UserAction) => {
   switch (action.type) {
     case userConstants.LOGIN_USER_REQUEST:
       return {

@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@redux-devtools/extension": "^3.2.2",
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.2",
@@ -19,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -43,12 +45,14 @@
     ]
   },
   "devDependencies": {
-    "@types/redux-logger": "^3.0.9",
+    "@types/axios": "^0.14.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.39",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "@types/react-redux": "^7.1.24",
-    "@types/redux-saga": "^0.10.5"
+    "@types/redux-logger": "^3.0.9",
+    "@types/redux-saga": "^0.10.5",
+    "dotenv": "^16.0.1"
   }
 }

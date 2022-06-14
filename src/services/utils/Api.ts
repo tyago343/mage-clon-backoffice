@@ -1,3 +1,4 @@
+import axios from "axios";
 import endpoints from "./endpoints";
 
 class Api {
@@ -12,8 +13,15 @@ class Api {
   constructor(host: string) {
     this.host = host;
   }
-  login(username: string, password: string) {
-    fetch(`${this.host}${endpoints.LOGIN}`);
+  async login(username: string, password: string) {
+    try{
+      const result = await axios.post(`${this.host}${endpoints.LOGIN}`, { password, username });
+      if (result) {
+        return await result.data;
+      }
+    }catch (e: any){
+      return e.response.data
+    }
   }
 }
 export default Api;
