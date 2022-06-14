@@ -1,0 +1,38 @@
+@import "../../../styles/colors.scss";
+
+.btn {
+  border: 1px solid;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  border-radius: 0;
+  display: inline-block;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.36;
+  padding: 0.6rem 1em 0.6rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+  vertical-align: baseline;
+  font-size: 1.6rem;
+  letter-spacing: 0.025em;
+  padding-bottom: 0.6875em;
+  padding-top: 0.6875em;
+  appearance: button;
+  cursor: pointer;
+  &.primary {
+    background-color: $buttonPrimary;
+    border-color: $buttonBorderPrimary;
+    color: #fff;
+    text-shadow: $buttonTextShadow;
+  }
+  &:hover {
+    background-color: $buttonPrimaryHover;
+    border-color: $buttonBorderPrimaryHover;
+    box-shadow: $buttonTextShadowHover;
+    text-decoration: none;
+  }
+}
