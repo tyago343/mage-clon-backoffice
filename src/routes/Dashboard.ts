@@ -1,5 +1,5 @@
-const Routes = {
+const DashboardRoutes = {
   LOGIN: "/login",
   INDEX: "/dashboard",
 };
-export default Routes;
+export default DashboardRoutes;

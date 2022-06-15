@@ -9,17 +9,18 @@ const Login = () => {
   const { pending, user, error } = useSelector((state: RootState) => state.user);
   const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
-    const target: any = evt.target;
-    const { password, username } = target.elements;
-    dispatch(loginUserRequest({ password: password.value, username: username.value }));
+    if (!pending) {
+      const target: any = evt.target;
+      const { password, username } = target.elements;
+      dispatch(loginUserRequest({ password: password.value, username: username.value }));
+    }
   };
-  useEffect(() => {
-  }, [user]);
+  useEffect(() => {}, [user]);
   return (
     <section>
       <div>
         <form onSubmit={(evt) => handleSubmit(evt)}>
-          <p></p>
+          <p>{error}</p>
           <input type="text" name="username" id="username" />
           <input type="password" name="password" id="password" />
           <Button type="submit" cssClasses="primary">
