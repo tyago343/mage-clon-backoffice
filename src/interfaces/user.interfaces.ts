@@ -2,15 +2,18 @@ export interface UserAction {
   type: string;
   payload: {
     error?: string;
-    user?: {
-      [index: string]: string;
-    };
+    user?: User;
   };
 }
 export interface UserState {
   pending: boolean;
-  user: {
-    [index: string]: string;
-  } | null;
+  user: User | null;
   error: string | null;
+}
+export interface User {
+  id: number | string;
+  name: string;
+  lastName: string;
+  username: string;
+  email: string;
 }

@@ -3,7 +3,7 @@ import * as userConstants from "../constants/user.constants";
 
 const initialState: UserState = {
   pending: false,
-  user: {},
+  user: null,
   error: null,
 };
 

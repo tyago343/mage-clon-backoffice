@@ -15,7 +15,9 @@ const Login = () => {
       dispatch(loginUserRequest({ password: password.value, username: username.value }));
     }
   };
-  useEffect(() => {}, [user]);
+  useEffect(() => {
+    console.log("usuario", user)
+  }, [user]);
   return (
     <section>
       <div>
