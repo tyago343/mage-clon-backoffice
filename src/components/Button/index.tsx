@@ -7,11 +7,11 @@ interface ButtonProps {
     [index: string]: string;
   };
   children?: React.ReactNode | React.ReactNode[];
-  cssClasses?: string;
+  className?: string;
 }
-const Button = ({ type, onClick, children, styles, cssClasses }: ButtonProps) => {
+const Button = ({ type, onClick, children, styles, className }: ButtonProps) => {
   return (
-    <button type={type} onClick={onClick} style={styles} className={`btn ${cssClasses}`}>
+    <button type={type} onClick={onClick} style={styles} className={`btn ${className}`}>
       {children}
     </button>
   );

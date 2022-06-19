@@ -1,12 +1,14 @@
 import React, { FormEvent, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
+import Input from "@Components/Input";
 import { UserState } from "../../interfaces/user.interfaces";
 import DashboardRoutes from "../../routes/Dashboard";
 import { loginUserRequest } from "../../services/actions/user.actions";
 import { RootState } from "../../services/reducers";
+import "./styles.scss";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -25,13 +27,13 @@ const Login = () => {
     }
   }, [user, navigate]);
   return (
-    <section>
-      <div>
+    <section className="section">
+      <div className="login-page__wrapper">
         <form onSubmit={(evt) => handleSubmit(evt)}>
           <p>{error}</p>
-          <input type="text" name="username" id="username" />
-          <input type="password" name="password" id="password" />
-          <Button type="submit" cssClasses="primary">
+          <Input type="text" name="username" />
+          <Input type="password" name="password" />
+          <Button type="submit" className="primary">
             <span>Send</span>
           </Button>
         </form>
