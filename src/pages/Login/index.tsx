@@ -41,6 +41,7 @@ const Login = () => {
           </Button>
         </form>
       </div>
+        <span className="login-page__copyright">Copyright © 2022 Santiago Casanova. All rights reserved.</span>
     </section>
   );
 };
