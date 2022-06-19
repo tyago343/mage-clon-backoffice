@@ -29,10 +29,13 @@ const Login = () => {
   return (
     <section className="section">
       <div className="login-page__wrapper">
+        <p style={{ color: "#eb5202", fontSize: "2.6rem", fontWeight: "300", lineHeight: "1.2" }}>
+          Welcome, please log in
+        </p>
         <form onSubmit={(evt) => handleSubmit(evt)}>
           <p>{error}</p>
-          <Input type="text" name="username" />
-          <Input type="password" name="password" />
+          <Input type="text" name="username" label="Username" id="username" required />
+          <Input type="password" name="password" label="Password" id="password" required />
           <Button type="submit" className="primary">
             <span>Send</span>
           </Button>

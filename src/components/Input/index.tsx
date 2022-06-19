@@ -1,8 +1,9 @@
 import React from "react";
-
+import "./styles.scss";
 export interface InputProps {
   type: string;
   name: string;
+  id: string;
   label?: string;
   defaultValue?: string | number;
   onChange?: () => void;
@@ -11,6 +12,7 @@ export interface InputProps {
   };
   children?: React.ReactNode | React.ReactNode[];
   className?: string;
+  required?: boolean;
 }
 
 const Input = ({
@@ -22,11 +24,26 @@ const Input = ({
   styles,
   children,
   className,
+  id,
+  required,
 }: InputProps) => {
+  const commonProps = {
+    ...(className && { className }),
+    styles,
+  };
   return (
-    <div className={`${className}`} style={styles}>
-      <input type={type} name={name} defaultValue={defaultValue} />
-      <label>{label}</label>
+    <div className="login-page__wrapper" {...commonProps}>
+      <label htmlFor={id} className={`login-page__label ${required ? "required" : ""}`}>
+        <span>{label}</span>
+      </label>
+      <input
+        type={type}
+        name={name}
+        defaultValue={defaultValue}
+        id={id}
+        className={`login-page__input`}
+        required={required}
+      />
       {children}
     </div>
   );
