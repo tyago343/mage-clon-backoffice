@@ -8,7 +8,8 @@ import { UserState } from "../../interfaces/user.interfaces";
 import DashboardRoutes from "../../routes/Dashboard";
 import { loginUserRequest } from "../../services/actions/user.actions";
 import { RootState } from "../../services/reducers";
-import "./styles.scss";
+import styles from  "./Login.module.scss";
+import "./Login.module.scss";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,8 +28,8 @@ const Login = () => {
     }
   }, [user, navigate]);
   return (
-    <section className="section">
-      <div className="login-page__wrapper">
+    <section className={styles.pageWrapper}>
+      <div className={styles.loginPageWrapper}>
         <p style={{ color: "#eb5202", fontSize: "2.6rem", fontWeight: "300", lineHeight: "1.2" }}>
           Welcome, please log in
         </p>
@@ -41,7 +42,7 @@ const Login = () => {
           </Button>
         </form>
       </div>
-        <span className="login-page__copyright">Copyright © 2022 Santiago Casanova. All rights reserved.</span>
+        <span className={styles.sarsa}>Copyright © 2022 Santiago Casanova. All rights reserved.</span>
     </section>
   );
 };

@@ -1,0 +1,46 @@
+@import "../../assets/styles/colors.scss";
+.menuWrapper {
+  left: 0;
+  position: fixed;
+  top: 0;
+  display: inline-block;
+  width: 8.800000000000001rem;
+  z-index: 700;
+  &::before {
+    background-color: $headerBackground;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 8.800000000000001rem;
+    z-index: 699;
+  }
+}
+.logo {
+  display: block;
+  height: 7.5rem;
+  padding: 1.7rem 0 1.7rem;
+  position: relative;
+  text-align: center;
+  z-index: 700;
+}
+.menu {
+}
+.menuItem {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+  min-height: 6.2rem;
+  padding: 1.2rem 0.5rem 0.5rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.1s linear;
+  word-wrap: break-word;
+  z-index: 700;
+  span {
+    color: #f7f3eb;
+  }
+}

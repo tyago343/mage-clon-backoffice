@@ -4,4 +4,45 @@ html {
   font-size: 62.5%;
   height: 100%;
 }
-
+body {
+  color: $backgroundPrimary;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.36;
+  font-size: 1.4rem;
+  min-height: 100%;
+  margin: 0;
+  height: 101%;
+  max-height: 100%;
+  min-width: 50rem;
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+#root {
+  color: $backgroundPrimary;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.36;
+  font-size: 1.4rem;
+  min-height: 100%;
+  margin: 0;
+  height: 101%;
+  max-height: 100%;
+  min-width: 50rem;
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+nav ul,
+nav ol {
+  list-style: none none;
+  margin: 0;
+  padding: 0;
+}

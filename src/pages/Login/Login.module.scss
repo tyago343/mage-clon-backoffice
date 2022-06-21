@@ -1,27 +1,6 @@
 @import "../../assets/styles/colors.scss";
 
-body {
-  color: $backgroundPrimary;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.36;
-  font-size: 1.4rem;
-  min-height: 100%;
-  margin: 0;
-  align-items: center;
-  display: flex;
-  background-color: $loginbackground;
-  height: 101%;
-  max-height: 100%;
-  min-width: 50rem;
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-}
-#root {
+.loginPageWrapper {
   -webkit-flex-grow: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
@@ -40,9 +19,7 @@ body {
   width: 100%;
   z-index: 1;
 }
-.login-page__wrapper {
-}
-.login-page__copyright {
+.sarsa {
   color: #989287;
   font-size: 1rem;
   font-weight: 400;
@@ -52,4 +29,12 @@ body {
   text-align: center;
   top: 100%;
   width: 100%;
+}
+.pageWrapper {
+  align-items: center;
+  display: flex;
+  background-color: $loginbackground;
+  height: 101%;
+  max-height: 100%;
+  min-width: 50rem;
 }
