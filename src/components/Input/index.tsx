@@ -15,7 +15,7 @@ export interface InputProps {
   required?: boolean;
 }
 
-const Input = ({
+const Input: React.FunctionComponent<InputProps> = ({
   name,
   label,
   defaultValue,

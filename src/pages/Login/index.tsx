@@ -8,8 +8,7 @@ import { UserState } from "../../interfaces/user.interfaces";
 import DashboardRoutes from "../../routes/Dashboard";
 import { loginUserRequest } from "../../services/actions/user.actions";
 import { RootState } from "../../services/reducers";
-import styles from  "./Login.module.scss";
-import "./Login.module.scss";
+import styles from  "./index.module.scss";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
