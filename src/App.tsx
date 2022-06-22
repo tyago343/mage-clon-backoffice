@@ -4,7 +4,7 @@ import "./assets/styles/_global.scss";
 import { Route, Routes } from "react-router-dom";
 import DashboardRoutes from "./routes/Dashboard";
 import IsUserAllowed from "./services/utils/utils";
-import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <Routes>
@@ -14,7 +14,7 @@ function App() {
         path={DashboardRoutes.INDEX}
         element={
           <IsUserAllowed>
-            <Home />
+            <Dashboard />
           </IsUserAllowed>
         }
       />

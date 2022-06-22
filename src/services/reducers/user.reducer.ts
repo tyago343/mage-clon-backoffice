@@ -14,6 +14,11 @@ const userReducer = (state = initialState, action: UserAction) => {
         ...state,
         pending: true,
       };
+      case userConstants.LOGOUT_USER_REQUEST:
+      return {
+        ...state,
+        pending: true,
+      };
     case userConstants.LOGIN_USER_SUCCESS:
       return {
         ...state,
@@ -21,12 +26,26 @@ const userReducer = (state = initialState, action: UserAction) => {
         user: action.payload.user,
         error: null,
       };
+      case userConstants.LOGOUT_USER_SUCCESS:
+        return {
+          ...state,
+          pending: false,
+          user: null,
+          error: null,
+        };
     case userConstants.LOGIN_USER_FAILURE:
       return {
         ...state,
         pending: false,
-        user: {},
-        error: action.payload.error,
+        user: null,
+        error: null,
+      };
+      case userConstants.LOGOUT_USER_FAILURE:
+      return {
+        ...state,
+        pending: false,
+        user: null,
+        error: null,
       };
     default:
       return {

@@ -14,13 +14,25 @@ class Api {
     this.host = host;
   }
   async login(username: string, password: string) {
-    try{
+    try {
       const result = await axios.post(`${this.host}${endpoints.LOGIN}`, { password, username });
       if (result) {
         return await result.data;
       }
-    }catch (e: any){
-      return e.response.data
+    } catch (e: any) {
+      return e.response.data;
+    }
+  }
+  async logout() {
+    try {
+      const result = await axios.get(`${this.host}${endpoints.LOGOUT}`, {
+        withCredentials: true,
+      });
+      if (result) {
+        return await result.data;
+      }
+    } catch (e: any) {
+      return e.response.data;
     }
   }
 }
