@@ -46,3 +46,17 @@ ol {
   margin: 0;
   padding: 0;
 }
+h1 {
+  margin: 0 0 2rem;
+  margin-bottom: 2rem;
+  color: $primaryColor;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 2.8rem;
+}
+.page-title {
+  color: #41362f;
+  font-size: 2.8rem;
+  margin-bottom: 0;
+  word-break: break-all;
+}

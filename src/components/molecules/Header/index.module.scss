@@ -1,0 +1,12 @@
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.actionsWrapper {
+  > div {
+    float: left;
+    height: 3.3rem;
+    padding: 0.75rem 2rem 0.65rem;
+  }
+}
