@@ -31,14 +31,70 @@
   letter-spacing: 0.025em;
   min-height: 6.2rem;
   padding: 1.2rem 0.5rem 0.5rem;
-  position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color 0.1s linear;
   word-wrap: break-word;
-  z-index: 700;
+  cursor: pointer;
   span {
     color: #f7f3eb;
   }
+}
+.menuItemWrapper {
+  background-color: #4a4542;
+  box-shadow: 0 0 3px #000;
+  left: 100%;
+  padding: 2rem 0 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  transition-duration: 0.3s;
+  transition-property: transform, visibility;
+  transition-timing-function: ease-in-out;
+  visibility: hidden;
+  z-index: 697;
+  text-align: left;
+}
+.active {
+  transform: translateX(0);
+  visibility: visible;
+  z-index: 698;
+}
+.menuItemSubtitle {
+  color: #fff;
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 4.2rem;
+  margin-left: 3rem;
+  margin-right: 5.8rem;
+}
+.menuItemList {
+  max-width: calc(100vw - 8.800000000000001rem);
+  min-height: 720px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  li {
+    min-width: 23.8rem;
+    display: block;
+    padding: 1.25rem 1.5rem;
+    color: #fcfcfc;
+    transition: background-color 0.1s linear;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    &:hover {
+      background-color: #403934;
+    }
+  }
+}
+.menuItemTitle {
+  position: relative;
+  z-index: 700;
+}
+.menuItemClose {
+  padding: 2.4rem 2.8rem;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
