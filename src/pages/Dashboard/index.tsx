@@ -7,7 +7,7 @@ const Dashboard = () => {
     <main>
       <Menu />
       <div className={styles.pageWrapper}>
-        Esto tiene que funcionar
+        <div className={styles.noticesWrapper}>Esto tiene que funcionar</div>
         <Header />
         <main></main>
         <footer></footer>

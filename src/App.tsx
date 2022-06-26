@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <Routes>
-      <Route index element={<Login />} />
+      <Route index element={<Dashboard />} />
       <Route path={DashboardRoutes.LOGIN} element={<Login />} />
       <Route
         path={DashboardRoutes.INDEX}

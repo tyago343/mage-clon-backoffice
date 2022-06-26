@@ -12,10 +12,10 @@ const UserMenu: FunctionComponent<UserMenuProps> = ({ user }: UserMenuProps) => 
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <span onClick={() => setToggle(!toggle)} className={styles.adminUser}>
+      <p onClick={() => setToggle(!toggle)} className={styles.adminUser}>
         <FaUser size={20} />
-        {user?.username || "Usuario"}
-      </span>
+        <span>{user?.username || "Usuario"}</span>
+      </p>
       <div style={{ display: toggle ? "block" : "none" }}>
         <ul>
           <li>My account</li>

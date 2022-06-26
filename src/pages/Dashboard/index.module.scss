@@ -5,3 +5,13 @@
   width: calc(100% - 8.800000000000001rem);
   margin-left: 8.800000000000001rem;
 }
+main {
+  margin-left: 3rem;
+}
+.noticesWrapper {
+  min-height: 5rem;
+  background: none;
+  margin: 0 0 -3px;
+  overflow: hidden;
+  padding: 1.5rem 0 1.5rem 3.3rem;
+}
