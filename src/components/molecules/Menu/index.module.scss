@@ -78,13 +78,17 @@
   li {
     min-width: 23.8rem;
     display: block;
-    padding: 1.25rem 1.5rem;
     color: #fcfcfc;
     transition: background-color 0.1s linear;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     &:hover {
       background-color: #403934;
+    }
+    a {
+      padding: 1.25rem 1.5rem;
+      width: 100%;
+      display: block;
     }
   }
 }

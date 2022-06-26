@@ -25,12 +25,12 @@ const Menu = () => {
                 }`}
               >
                 <strong className={styles.menuItemSubtitle}>Catalog</strong>
-                <span className={styles.menuItemClose}>
+                <span className={styles.menuItemClose} onClick={() => setActiveItem("")}>
                   <AiOutlineClose size={20} />
                 </span>
                 <ul className={styles.menuItemList}>
                   <li>
-                    <Link to={DashboardRoutes.PRODUCTS}>Products</Link>
+                    <Link to={DashboardRoutes.PRODUCTS} onClick={() => setActiveItem("")}>Products</Link>
                   </li>
                 </ul>
               </div>
