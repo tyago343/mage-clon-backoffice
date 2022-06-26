@@ -5,10 +5,11 @@ import { Route, Routes } from "react-router-dom";
 import DashboardRoutes from "./routes/Dashboard";
 import IsUserAllowed from "./services/utils/utils";
 import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Product";
 function App() {
   return (
     <Routes>
-      <Route index element={<Dashboard />} />
+      <Route index element={<Login />} />
       <Route path={DashboardRoutes.LOGIN} element={<Login />} />
       <Route
         path={DashboardRoutes.INDEX}
@@ -17,7 +18,16 @@ function App() {
             <Dashboard />
           </IsUserAllowed>
         }
-      />
+      >
+        <Route
+          path={DashboardRoutes.PRODUCTS}
+          element={
+            <IsUserAllowed>
+              <Products />
+            </IsUserAllowed>
+          }
+        />
+      </Route>
     </Routes>
   );
 }

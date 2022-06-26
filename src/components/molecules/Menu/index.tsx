@@ -12,10 +12,18 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <p className={styles.menuItem}>
+            <div className={styles.menuItem}>
               <FcFactory size={50} />
               <span>Catalog</span>
-            </p>
+              <div>
+                <h2>Catalog</h2>
+                <ul>
+                  <li>
+                    <Link to={DashboardRoutes.PRODUCTS}>Products</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
