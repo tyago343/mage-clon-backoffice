@@ -6,6 +6,7 @@ import DashboardRoutes from "./routes/Dashboard";
 import IsUserAllowed from "./services/utils/utils";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Product";
+import Category from "./pages/Category";
 function App() {
   return (
     <Routes>
@@ -24,6 +25,14 @@ function App() {
           element={
             <IsUserAllowed>
               <Products />
+            </IsUserAllowed>
+          }
+        />
+         <Route
+          path={DashboardRoutes.CATEGORIES}
+          element={
+            <IsUserAllowed>
+              <Category />
             </IsUserAllowed>
           }
         />

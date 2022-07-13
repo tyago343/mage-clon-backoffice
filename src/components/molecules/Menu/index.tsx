@@ -20,9 +20,8 @@ const Menu = () => {
                 <span>Catalog</span>
               </p>
               <div
-                className={`${styles.menuItemWrapper} ${
-                  activeItem === "catalog" ? styles.active : ""
-                }`}
+                className={`${styles.menuItemWrapper} ${activeItem === "catalog" ? styles.active : ""
+                  }`}
               >
                 <strong className={styles.menuItemSubtitle}>Catalog</strong>
                 <span className={styles.menuItemClose} onClick={() => setActiveItem("")}>
@@ -31,6 +30,9 @@ const Menu = () => {
                 <ul className={styles.menuItemList}>
                   <li>
                     <Link to={DashboardRoutes.PRODUCTS} onClick={() => setActiveItem("")}>Products</Link>
+                  </li>
+                  <li>
+                    <Link to={DashboardRoutes.CATEGORIES} onClick={() => setActiveItem("")}>Categories</Link>
                   </li>
                 </ul>
               </div>
