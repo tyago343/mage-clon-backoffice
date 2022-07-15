@@ -4,7 +4,7 @@ import DashboardRoutes from "src/routes/Dashboard";
 const Category = () => {
   return (
     <div>
-      <Link to={DashboardRoutes.CATEGORIES.CREATE}>crear</Link>
+      <Link to={DashboardRoutes.CATEGORIES.CREATE}>Create</Link>
       <Outlet />
     </div>
   )

@@ -29,7 +29,7 @@ function App() {
             </IsUserAllowed>
           }
         />
-         <Route
+        <Route
           path={DashboardRoutes.CATEGORIES.INDEX}
           element={
             <IsUserAllowed>
