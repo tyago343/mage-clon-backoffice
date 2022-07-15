@@ -7,6 +7,7 @@ import IsUserAllowed from "./services/utils/utils";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Product";
 import Category from "./pages/Category";
+import CreateCategory from "./pages/Category/createCategory";
 function App() {
   return (
     <Routes>
@@ -29,13 +30,15 @@ function App() {
           }
         />
          <Route
-          path={DashboardRoutes.CATEGORIES}
+          path={DashboardRoutes.CATEGORIES.INDEX}
           element={
             <IsUserAllowed>
               <Category />
             </IsUserAllowed>
           }
-        />
+        >
+          <Route path={DashboardRoutes.CATEGORIES.CREATE} element={<CreateCategory />} />
+        </Route>
       </Route>
     </Routes>
   );

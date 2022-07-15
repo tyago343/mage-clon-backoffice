@@ -32,7 +32,7 @@ const Menu = () => {
                     <Link to={DashboardRoutes.PRODUCTS} onClick={() => setActiveItem("")}>Products</Link>
                   </li>
                   <li>
-                    <Link to={DashboardRoutes.CATEGORIES} onClick={() => setActiveItem("")}>Categories</Link>
+                    <Link to={DashboardRoutes.CATEGORIES.INDEX} onClick={() => setActiveItem("")}>Categories</Link>
                   </li>
                 </ul>
               </div>
