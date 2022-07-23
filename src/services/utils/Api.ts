@@ -28,7 +28,7 @@ class Api {
       return e.response.data;
     }
   }
-  async createResource(body: { [index: string]: string }, endpoint: string) {
+  async createResource(body: { [index: string]: string }, endpoint: string): Promise<any> {
     try {
       const result = await axios.post(`${this.host}${endpoint}`, body);
       if (result) {
