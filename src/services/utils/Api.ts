@@ -28,5 +28,15 @@ class Api {
       return e.response.data;
     }
   }
+  async createResource(body: { [index: string]: string }, endpoint: string) {
+    try {
+      const result = await axios.post(`${this.host}${endpoint}`, body);
+      if (result) {
+        return await result.data;
+      }
+    } catch (e: any) {
+      return e.response.data;
+    }
+  }
 }
 export default Api;

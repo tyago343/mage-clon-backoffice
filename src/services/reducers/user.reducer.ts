@@ -1,4 +1,4 @@
-import { UserAction, UserState } from "../../interfaces/user.interfaces";
+import { UserAction, UserState } from "src/interfaces/user.interfaces";
 import * as userConstants from "../constants/user.constants";
 
 const initialState: UserState = {
