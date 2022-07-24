@@ -30,7 +30,7 @@ class Api {
   }
   async createResource(body: { [index: string]: string }, endpoint: string): Promise<any> {
     try {
-      const result = await axios.post(`${this.host}${endpoint}`, body);
+      const result = await axios.post(`${this.host}${endpoint}`, body, { withCredentials: true });
       if (result) {
         return await result.data;
       }
