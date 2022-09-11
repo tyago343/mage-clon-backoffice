@@ -17,7 +17,7 @@ const CreateCategory = () => {
       <form onSubmit={(event) => handleSubmit(event)}>
         <Input type="text" name="name" id="name" label="Name" required={true} />
         <Input type="text" name="position" id="position" label="Position" />
-        <Button type="submit">Create</Button>
+        <Button type="submit" className="primary" >Save</Button>
       </form>
     </div>
   )

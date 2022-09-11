@@ -23,16 +23,34 @@
   padding-top: 0.6875em;
   appearance: button;
   cursor: pointer;
+
   &.primary {
     background-color: $buttonPrimary;
     border-color: $buttonBorderPrimary;
     color: #fff;
     text-shadow: $buttonTextShadow;
   }
-  &:hover {
+
+  &.primary:hover {
     background-color: $buttonPrimaryHover;
     border-color: $buttonBorderPrimaryHover;
     box-shadow: $buttonTextShadowHover;
     text-decoration: none;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: $secondaryBackgroundColorHover;
+    color: $secondaryColorHover;
+    text-decoration: none;
+  }
+
+  a {
+    color: $secondaryColorHover;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.36;
+    text-align: center;
   }
 }

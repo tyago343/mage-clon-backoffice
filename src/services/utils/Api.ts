@@ -5,6 +5,7 @@ class Api {
   private readonly host: string;
   constructor(host: string) {
     this.host = host;
+    axios.defaults.withCredentials = true
   }
   async login(username: string, password: string) {
     try {
@@ -30,12 +31,22 @@ class Api {
   }
   async createResource(body: { [index: string]: string }, endpoint: string): Promise<any> {
     try {
-      const result = await axios.post(`${this.host}${endpoint}`, body, { withCredentials: true });
+      const result = await axios.post(`${this.host}${endpoint}`, body);
       if (result) {
         return await result.data;
       }
     } catch (e: any) {
       return e.response.data;
+    }
+  }
+  async fetchResource(endpoint: string) {
+    try {
+      const result = await axios.get(`${this.host}${endpoint}`);
+      if (result) {
+        return await result.data
+      }
+    } catch (e: any) {
+      return e.response.data
     }
   }
 }

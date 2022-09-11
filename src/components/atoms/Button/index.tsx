@@ -10,11 +10,11 @@ interface ButtonProps {
   className?: string;
 }
 const Button: React.FunctionComponent<ButtonProps> = ({
-  type,
+  type = "button",
   onClick,
-  children,
+  children = "CTA",
   styles,
-  className,
+  className = "",
 }: ButtonProps) => {
   return (
     <button type={type} onClick={onClick} style={styles} className={`btn ${className}`}>
