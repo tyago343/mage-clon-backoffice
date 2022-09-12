@@ -18,3 +18,7 @@ export const fetchCategoriesSuccess = (payload: Category[]) => ({
   type: categoryConstants.FETCH_CATEGORIES_SUCCESS,
   payload
 })
+
+export const fetchCategoriesRequest = () => ({
+  type: categoryConstants.FETCH_CATEGORIES_REQUEST
+})

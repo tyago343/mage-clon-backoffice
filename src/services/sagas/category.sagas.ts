@@ -33,6 +33,7 @@ function* fetchCategories(action: AnyAction): any {
 }
 function* categorySaga() {
   yield all([takeLatest(categoryConstants.CREATE_CATEGORY_REQUEST, createCategorySaga)]);
+  yield all([takeLatest(categoryConstants.FETCH_CATEGORIES_REQUEST, fetchCategories)]);
 }
 
 export default categorySaga;

@@ -2,7 +2,7 @@ export interface UserAction {
   type: string;
   payload: {
     error?: string;
-    user?: User;
+    user: User | null;
   };
 }
 export interface UserState {

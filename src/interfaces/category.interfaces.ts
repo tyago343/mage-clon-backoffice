@@ -11,5 +11,6 @@ export interface CategoryAction {
 }
 export interface CategoryState {
   categories: Category[],
-  currentCategory: Category | null
+  currentCategory: Category | null,
+  pending: boolean;
 }
