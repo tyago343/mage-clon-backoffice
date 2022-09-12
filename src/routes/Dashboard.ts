@@ -4,7 +4,8 @@ const DashboardRoutes = {
   PRODUCTS: "/dashboard/products",
   CATEGORIES: {
     INDEX:  "/dashboard/categories",
-    CREATE:  "/dashboard/categories/create"
+    CREATE:  "/dashboard/categories/create",
+    CATEGORY: "/dashboard/categories/:identifier"
   },
 };
 export default DashboardRoutes;

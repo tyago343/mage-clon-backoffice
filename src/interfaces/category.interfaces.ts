@@ -1,8 +1,8 @@
 export interface Category {
   name: string;
   position: string;
-  id?: number;
-  createAt?:string;
+  id: string;
+  createAt?: string;
   updatedAt?: string;
 }
 export interface CategoryAction {

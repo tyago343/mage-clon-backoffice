@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Product";
 import Category from "./pages/Category";
 import CreateCategory from "./pages/Category/createCategory";
+import CategoryViewer from "./pages/Category/categoryViewer";
 function App() {
   return (
     <Routes>
@@ -38,6 +39,7 @@ function App() {
           }
         >
           <Route path={DashboardRoutes.CATEGORIES.CREATE} element={<CreateCategory />} />
+          <Route path={DashboardRoutes.CATEGORIES.CATEGORY} element={<CategoryViewer />} />
         </Route>
       </Route>
     </Routes>

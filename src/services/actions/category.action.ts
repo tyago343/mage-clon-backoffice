@@ -5,7 +5,7 @@ export const createCategorySuccess = (payload: Category) => ({
   type: categoryConstants.CREATE_CATEGORY_SUCCESS,
   payload
 })
-export const createCategoryRequest = (payload: Category) => ({
+export const createCategoryRequest = (payload: Partial<Category>) => ({
   type: categoryConstants.CREATE_CATEGORY_REQUEST,
   payload
 })

@@ -20,7 +20,7 @@ function* createCategorySaga(action: AnyAction): any {
     throw new Error(e.message);
   }
 }
-function* fetchCategories(action: AnyAction): any {
+function* fetchCategories(): any {
   yield put(fetchCategoriesPending());
   try {
     const result = yield service.fetchResource(endpoints.FETCHCATEGORIES);
