@@ -14,16 +14,28 @@ const categoryReducer = (state = initialState, action: CategoryAction | any): Ca
         ...state,
         pending: true
       }
+
+    case categoryConstants.FETCH_CATEGORIES_SUCCESS:
+      return {
+        ...state,
+        categories: [...action.payload],
+        pending: false
+      }
     case categoryConstants.CREATE_CATEGORY_SUCCESS:
       return {
         currentCategory: action.payload,
         categories: [...state.categories, action.payload],
         pending: false
       }
-    case categoryConstants.FETCH_CATEGORIES_SUCCESS:
+    case categoryConstants.GET_CATEGORY_BY_ID_PENDING:
       return {
         ...state,
-        categories: [...action.payload],
+        pending: true
+      }
+    case categoryConstants.GET_CATEGORY_BY_ID_SUCCESS:
+      return {
+        ...state,
+        currentCategory: action.payload,
         pending: false
       }
     default:

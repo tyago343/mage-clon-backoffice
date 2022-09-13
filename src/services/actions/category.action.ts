@@ -22,3 +22,17 @@ export const fetchCategoriesSuccess = (payload: Category[]) => ({
 export const fetchCategoriesRequest = () => ({
   type: categoryConstants.FETCH_CATEGORIES_REQUEST
 })
+
+export const getCategoryByIdPending = () => ({
+  type: categoryConstants.GET_CATEGORY_BY_ID_PENDING,
+})
+
+export const getCategoryByIdSuccess = (payload: Category[]) => ({
+  type: categoryConstants.GET_CATEGORY_BY_ID_SUCCESS,
+  payload
+})
+
+export const getCategoryByIdRequest = (payload: number | string) => ({
+  type: categoryConstants.GET_CATEGORY_BY_ID_REQUEST,
+  payload
+})

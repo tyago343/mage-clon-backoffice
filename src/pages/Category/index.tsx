@@ -12,9 +12,10 @@ const Category = () => {
   const dispatch = useDispatch();
   const { categories, pending } = useSelector((state: RootState) => state.category);
   useEffect(() => {
-    dispatch(fetchCategoriesRequest());
+    if (!categories.length)
+      dispatch(fetchCategoriesRequest());
     return () => { };
-  }, [dispatch])
+  }, [dispatch, categories.length])
   return (
     <>
       <Spinner active={pending} />
