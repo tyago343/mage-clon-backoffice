@@ -7,8 +7,8 @@ import IsUserAllowed from "./services/utils/utils";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Product";
 import Category from "./pages/Category";
-import CreateCategory from "./pages/Category/createCategory";
-import CategoryViewer from "./pages/Category/categoryViewer";
+import CreateCategory from "./components/molecules/CategoryCreator";
+import CategoryViewer from "./components/molecules/CategoryViewer";
 function App() {
   return (
     <Routes>
