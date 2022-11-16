@@ -7,7 +7,7 @@ import { Link, Outlet } from "react-router-dom"
 import DashboardRoutes from "src/routes/Dashboard";
 import { fetchCategoriesRequest } from "src/services/actions/category.action";
 import { RootState } from "src/services/reducers";
-
+import styles from './index.module.scss'
 const Category = () => {
   const dispatch = useDispatch();
   const { categories, pending } = useSelector((state: RootState) => state.category);
@@ -19,29 +19,37 @@ const Category = () => {
   return (
     <>
       <Spinner active={pending} />
-      <div>
-        <div>
+      <div className={styles.wrapper}>
+        <div className={styles.header}>
           {/* 
           Here the idea it's build a store selector
         */}
         </div>
-        <ul>
-          {
-            !pending && categories.map(category => (
-              <li key={`${category.name}_${category.id}`}>
-                <Link
-                  to={DashboardRoutes.CATEGORIES.CATEGORY.replace(":identifier", category.id)}
-                >
-                  {category.name}
-                </Link>
-              </li>
-            ))
-          }
-        </ul>
-        <Button>
-          <Link to={DashboardRoutes.CATEGORIES.CREATE}>Create</Link>
-        </Button>
-        <Outlet />
+        <div className={styles.columns}>
+        <aside className={styles.aside}>
+          <div>
+            <Button>
+              <Link to={DashboardRoutes.CATEGORIES.CREATE}>Create</Link>
+            </Button>
+          </div>
+          <ul>
+            {
+              !pending && categories.map(category => (
+                <li key={`${category.name}_${category.id}`}>
+                  <Link
+                    to={DashboardRoutes.CATEGORIES.CATEGORY.replace(":identifier", category.id)}
+                  >
+                    {category.name}
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
+        </aside>
+        <main className={styles.container}>
+          <Outlet />
+        </main>
+        </div>
       </div>
     </>
   )

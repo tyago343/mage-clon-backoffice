@@ -10,7 +10,7 @@ const Dashboard = () => {
       <div className={styles.pageWrapper}>
         <div className={styles.noticesWrapper}>Esto tiene que funcionar</div>
         <Header />
-        <main>
+        <main className={styles.content}>
           <Outlet />
         </main>
         <footer></footer>
