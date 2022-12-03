@@ -4,5 +4,6 @@ const endpoints = {
   CREATECATEGORY: "/categories",
   FETCHCATEGORIES: "/categories",
   GETCATEGORY: "/categories/:identifier",
+  FETPRODUCTS: "/products"
 };
 export default endpoints;

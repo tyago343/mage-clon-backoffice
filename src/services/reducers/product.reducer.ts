@@ -1,38 +1,39 @@
 import { CategoryAction, CategoryState } from 'src/interfaces/category.interfaces';
-import * as categoryConstants from '../constants/category.constants';
+import { ProductState } from 'src/interfaces/product.interfaces';
+import * as productConstants from '../constants/product.constants';
 
-const initialState: CategoryState = {
+const initialState: ProductState = {
   list: [],
   current: null,
   pending: false,
 }
 
-const categoryReducer = (state = initialState, action: CategoryAction | any): CategoryState => {
+const categoryReducer = (state = initialState, action: ProductState | any): ProductState => {
   switch (action.type) {
-    case categoryConstants.FETCH_CATEGORIES_PENDING:
+    case productConstants.FETCH_PRODUCTS_PENDING:
       return {
         ...state,
         pending: true
       }
 
-    case categoryConstants.FETCH_CATEGORIES_SUCCESS:
+    case productConstants.FETCH_PRODUCTS_SUCCESS:
       return {
         ...state,
         list: [...action.payload],
         pending: false
       }
-    case categoryConstants.CREATE_CATEGORY_SUCCESS:
+    case productConstants.CREATE_PRODUCT_SUCCESS:
       return {
         current: action.payload,
         list: [...state.list, action.payload],
         pending: false
       }
-    case categoryConstants.GET_CATEGORY_BY_ID_PENDING:
+    case productConstants.GET_PRODUCT_BY_ID_PENDING:
       return {
         ...state,
         pending: true
       }
-    case categoryConstants.GET_CATEGORY_BY_ID_SUCCESS:
+    case productConstants.GET_PRODUCT_BY_ID_SUCCESS:
       return {
         ...state,
         current: action.payload,

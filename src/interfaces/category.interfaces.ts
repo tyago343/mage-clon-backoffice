@@ -10,7 +10,7 @@ export interface CategoryAction {
   payload: Category | Category[];
 }
 export interface CategoryState {
-  categories: Category[],
-  currentCategory: Category | null,
+  list: Category[],
+  current: Category | null,
   pending: boolean;
 }

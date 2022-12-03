@@ -9,8 +9,8 @@ import { RootState } from "src/services/reducers";
 const CategoryViewer = () => {
   const { identifier } = useParams();
   const dispatch = useDispatch();
-  const { currentCategory, pending } = useSelector(
-    (state: RootState) => state.category
+  const { current, pending } = useSelector(
+    (globalState: RootState) => globalState.category
   );
   useEffect(() => {
     if (identifier) {
@@ -21,7 +21,7 @@ const CategoryViewer = () => {
     <>
       <Spinner active={pending} />
       <div style={{ fontSize: "50px", color: "#ca1bff" }}>
-        <div>{currentCategory && currentCategory.name}</div>
+        <div>{current && current.name}</div>
       </div>
     </>
   );
