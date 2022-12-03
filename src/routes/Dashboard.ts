@@ -3,7 +3,7 @@ const DashboardRoutes = {
   INDEX: "/dashboard",
   PRODUCTS: "/dashboard/products",
   CATEGORIES: {
-    INDEX:  "/dashboard/categories",
+    INDEX:  "categories",
     CREATE:  "create",
     CATEGORY: ":identifier"
   },
