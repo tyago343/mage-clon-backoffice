@@ -9,17 +9,21 @@ import { RootState } from "src/services/reducers";
 const CategoryViewer = () => {
   const { identifier } = useParams();
   const dispatch = useDispatch();
-  const { currentCategory, pending } = useSelector((state: RootState) => state.category);
+  const { currentCategory, pending } = useSelector(
+    (state: RootState) => state.category
+  );
   useEffect(() => {
     if (identifier) {
       dispatch(getCategoryByIdRequest(identifier));
     }
-  }, [identifier, dispatch])
+  }, [identifier, dispatch]);
   return (
     <>
       <Spinner active={pending} />
-      <div style={{ fontSize: "50px", color: "#ca1bff" }}>{currentCategory && currentCategory.name}</div>
+      <div style={{ fontSize: "50px", color: "#ca1bff" }}>
+        <div>{currentCategory && currentCategory.name}</div>
+      </div>
     </>
-  )
-}
+  );
+};
 export default CategoryViewer;
