@@ -1,5 +1,5 @@
 import Spinner from "@Components/atoms/Spinner";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { fetchProductsRequest } from "src/services/actions/products.action";
@@ -10,8 +10,11 @@ const Products = () => {
     (globalState: RootState) => globalState.product
   );
   useEffect(() => {
-    if (!productList) dispatch(fetchProductsRequest());
-    return () => {};
+    const controller = new AbortController();
+    if (!productList.length) dispatch(fetchProductsRequest());
+    return () => {
+      controller.abort()
+    };
   }, [productList.length]);
 
   return (

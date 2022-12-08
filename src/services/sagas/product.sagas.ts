@@ -32,7 +32,7 @@ function* createProductSaga(action: AnyAction): any {
 function* fetchProducts(): any {
   yield put(fetchProductsPending());
   try {
-    const result = yield service.fetchResource(endpoints.FETCHCATEGORIES);
+    const result = yield service.fetchResource(endpoints.FETCHPRODUCTS);
     if (result) {
       yield put(fetchProductsSuccess(result));
     }

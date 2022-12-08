@@ -14,9 +14,13 @@ const Category = () => {
     (state: RootState) => state.category
   );
   useEffect(() => {
-    if (!categoryList.length) dispatch(fetchCategoriesRequest());
-    return () => {};
-  }, [dispatch, categoryList.length]);
+    const controller = new AbortController();
+    if (!categoryList.length) {
+      dispatch(fetchCategoriesRequest())};
+    return () => {
+      controller.abort();
+    };
+  }, [categoryList.length]);
   return (
     <>
       <Spinner active={pending} />
