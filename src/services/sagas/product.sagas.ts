@@ -3,11 +3,9 @@ import * as Effects from "redux-saga/effects";
 import service from "../../config/api";
 import * as productConstants from "../constants/product.constants";
 import {
-  createProductRequest,
   fetchProductsPending,
   fetchProductsSuccess,
   getProductByIdPending,
-  getProductByIdRequest,
   getProductByIdSuccess,
   createProductSuccess
 } from "../actions/products.action";

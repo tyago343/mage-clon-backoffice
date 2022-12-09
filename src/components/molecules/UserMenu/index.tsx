@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { User } from "src/interfaces/user.interfaces";
 import { logoutUserRequest } from "src/services/actions/user.actions";

@@ -1,11 +1,7 @@
-import React from "react";
 import Menu from "@Components/molecules/Menu";
 import styles from "./index.module.scss";
 import Header from "@Components/molecules/Header";
-import { Outlet, Route, Routes } from "react-router-dom";
-import DashboardRoutes from "src/routes/Dashboard";
-import CreateCategory from "@Components/molecules/CategoryCreator";
-import CategoryViewer from "@Components/molecules/CategoryViewer";
+import { Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <>

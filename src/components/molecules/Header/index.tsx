@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { FaSearch, FaBell } from "react-icons/fa";
 import UserMenu from "../UserMenu";

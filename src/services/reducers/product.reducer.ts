@@ -1,4 +1,3 @@
-import { CategoryAction, CategoryState } from 'src/interfaces/category.interfaces';
 import { ProductState } from 'src/interfaces/product.interfaces';
 import * as productConstants from '../constants/product.constants';
 
